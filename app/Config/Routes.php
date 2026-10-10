@@ -8,5 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
-$routes->get('/customers', 'Customers::index');
-$routes->get('/users', 'Users::index');
+$routes->get('/customers', 'CustomerController::index');
+$routes->get('/users', 'UserController::index');
