@@ -6,14 +6,17 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'user_accounts';
-    protected $primaryKey = 'user_id';
+    protected $table            = 'users';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useTimestamps    = false;
 
     protected $allowedFields = [
         'username',
-        'password_hash',
         'full_name',
-        'role',
-        'email'
+        'password',
+        'avatar',
+        'created_at'
     ];
 }

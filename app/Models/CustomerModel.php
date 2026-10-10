@@ -6,13 +6,15 @@ use CodeIgniter\Model;
 
 class CustomerModel extends Model
 {
-    protected $table = 'customer_accounts';
-    protected $primaryKey = 'customer_id';
+    protected $table = 'customers';
+    protected $primaryKey = 'id';
 
     protected $allowedFields = [
         'full_name',
         'email',
         'phone',
-        'address'
+        'created_at'
     ];
+
+    protected $useTimestamps = false;
 }
